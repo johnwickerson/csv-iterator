@@ -27,6 +27,8 @@ Run `make`.
 This repo includes a sample CSV file. To use it to see how the tool works, run the following command:
 
     ./csv_iterator -csv database.csv -cmd "echo \$firstname got \$percent%."
+	
+You can also run `make install` to copy the executable into `~/bin`. Then, if `~/bin` is in your `$PATH`, you can run `csv_iterator` from any directory.
 
 ## What the tool does
 		
