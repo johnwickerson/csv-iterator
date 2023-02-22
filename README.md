@@ -45,3 +45,5 @@ Note:
 - I wrote `\$firstname` rather than `$firstname` above in order to prevent the `firstname` variable from being expanded when calling `csv_iterator`. It should only be expanded when the generated commands are executed.
 
 - Best avoid having backticks in the CSV file, as Bash might see those as commands to be executed.
+
+- Column names in the CSV file mustn't begin with a digit (because environment variables can't begin with a digit).

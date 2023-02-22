@@ -97,6 +97,12 @@ let main () =
     | h :: t -> (h, t)
   in
 
+  let is_digit = function '0'..'9' -> true | _ -> false in
+  List.iter (fun h ->
+    if is_digit (h.[0]) then
+      failwith "Column names must not begin with a digit."
+    ) headings;
+
   (* Find the entry for the column named `s` in the given `row`. *)
   let lookup s row = 
     let rec lookup s = function
